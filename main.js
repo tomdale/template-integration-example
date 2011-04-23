@@ -18,6 +18,8 @@ TemplateIntegrationExample.main = function main() {
   // on screen.  If you app gets any level of complexity, you will probably 
   // create multiple pages and panes.  
   TemplateIntegrationExample.getPath('mainPage.mainPane').append() ;
+  var people = TemplateIntegrationExample.store.find(TemplateIntegrationExample.Person);
+  TemplateIntegrationExample.contentController.set('content', people);
 
   // Step 2. Set the content property on your primary controller.
   // This will make your app come alive!
